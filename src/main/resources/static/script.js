@@ -194,12 +194,12 @@ async function editUser(userId) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const user = await response.json();
-        
+
         userIdInput.value = user.id;
         userNameInput.value = user.name;
         userEmailInput.value = user.email;
         userAgeInput.value = user.age;
-        
+
         // Scroll to form
         document.querySelector('.form-container').scrollIntoView({ behavior: 'smooth' });
         showMessage('User loaded for editing', 'info');
@@ -232,13 +232,13 @@ async function searchUsers() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const users = await response.json();
-        
+
         if (users.length === 0) {
             showMessage('No users found matching your criteria', 'info');
         } else {
             showMessage(`Found ${users.length} user(s)`, 'success');
         }
-        
+
         displayUsers(users);
     } catch (error) {
         console.error('Error searching users:', error);
@@ -256,18 +256,18 @@ function displayUsers(users) {
     }
 
     usersTableBody.innerHTML = users.map(user => `
-        <tr>
+            <tr>
             <td>${user.id}</td>
             <td>${user.name}</td>
             <td>${user.email}</td>
             <td>${user.age}</td>
             <td>
-                <div class="action-buttons">
-                    <button class="btn btn-edit" onclick="editUser(${user.id})">Edit</button>
-                    <button class="btn btn-danger" onclick="deleteUser(${user.id})">Delete</button>
-                </div>
+            <div class="action-buttons">
+            <button class="btn btn-edit" onclick="editUser(${user.id})">Edit</button>
+            <button class="btn btn-danger" onclick="deleteUser(${user.id})">Delete</button>
+            </div>
             </td>
-        </tr>
+            </tr>
     `).join('');
 }
 
