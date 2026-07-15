@@ -25,9 +25,6 @@ MyProjectFai/
 │   │   │               └── CorsConfig.java (NEW - Enables frontend communication)
 │   │   └── resources/
 │   │       └── static/ (NEW - Frontend files)
-│   │           ├── index.html
-│   │           ├── styles.css
-│   │           └── script.js
 │   └── test/
 ├── pom.xml
 └── README.md
@@ -43,15 +40,6 @@ MyProjectFai/
 - ✅ Search Users (by name/email)
 - ✅ Global Exception Handling
 - ✅ CORS Support
-
-### Frontend (HTML/CSS/JavaScript)
-- 🎨 Modern, responsive UI
-- ✅ Create/Edit/Delete users
-- 🔍 Search functionality
-- 📱 Mobile-friendly design
-- 🎯 Real-time table updates
-- 💬 User-friendly notifications
-- ⚡ Smooth animations
 
 ## API Endpoints
 
@@ -70,7 +58,6 @@ MyProjectFai/
 ### 1. Prerequisites
 - Java 17+ installed
 - Maven installed
-- Modern web browser (Chrome, Firefox, Safari, Edge)
 
 ### 2. Build & Run Backend
 
@@ -87,41 +74,20 @@ mvn spring-boot:run
 
 The backend will start at: `http://localhost:8080`
 
-### 3. Access Frontend
-
-Once the backend is running, open your browser and navigate to:
-```
-http://localhost:8080
-```
-
-The frontend will be automatically served by Spring Boot from the `static` folder.
-
-## Usage
 
 ### Create a User
-1. Fill in the form fields (ID, Name, Email, Age)
-2. Click "Create User" button
-3. User appears in the table below
+
 
 ### View All Users
-- Click "Show All" button to display all users
-- Users are automatically loaded when page refreshes
+
 
 ### Search Users
-1. Enter name and/or email in search fields
-2. Click "Search" button
-3. Table shows matching results
 
 ### Edit User
-1. Click "Edit" button on any user row
-2. Form fields auto-populate with user data
-3. Modify values as needed
-4. Click "Update User" button
+
 
 ### Delete User
-1. Click "Delete" button on any user row
-2. Confirm deletion in popup
-3. User removed from database
+
 
 ## Technical Details
 
@@ -131,11 +97,6 @@ The frontend will be automatically served by Spring Boot from the `static` folde
 - **Build Tool**: Maven
 - **API Type**: REST
 
-### Frontend Stack
-- **HTML5**: Structure & layout
-- **CSS3**: Modern styling with gradients and animations
-- **Vanilla JavaScript**: No dependencies, pure ES6+
-- **Fetch API**: For HTTP communication
 
 ### Data Model
 
@@ -166,20 +127,6 @@ CORS is enabled to allow frontend (running on same server) to communicate with b
 - ✅ Empty state messages
 - ✅ Global exception handler on backend
 
-## Browser Support
-
-- ✅ Chrome/Chromium (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
-- ✅ Mobile browsers (iOS Safari, Chrome Android)
-
-## Responsive Design
-
-The frontend is fully responsive and works great on:
-- 📱 Mobile phones (320px+)
-- 📱 Tablets (768px+)
-- 🖥️ Desktops (1024px+)
 
 ## Known Issues (Learning Project)
 
@@ -190,9 +137,6 @@ This is a learning project. The following issues are intentional for educational
 3. **Default Search Parameters** - Search endpoint has hardcoded default values (`defaultValue = "Lil"`, `defaultValue = "email"`)
 4. **Code Cleanup** - Unused empty constructor in `UserService` class
 
-**Frontend Issues (FIXED):**
-- ✅ DELETE response parsing (changed from JSON to text)
-- ✅ Input validation (email format, age range 0-150)
 
 ## Future Enhancements
 
@@ -207,17 +151,8 @@ This is a learning project. The following issues are intentional for educational
 - [ ] Add role-based access control
 - [ ] Add activity logging
 
-## Troubleshooting
-
-### Frontend not loading
-- Ensure backend is running on port 8080
-- Clear browser cache (Ctrl+Shift+Delete)
-- Check browser console for errors (F12)
-
 ### API errors
 - Check backend logs for error details
-- Verify CORS configuration
-- Ensure JSON payload format is correct
 
 ### Port already in use
 - Change port in `application.properties` (if exists)
@@ -229,4 +164,4 @@ This project is part of Java Learning series.
 
 ## Author
 
-Created as a learning project for Spring Boot and Frontend integration.
+Created as a learning project for Spring Boot.
